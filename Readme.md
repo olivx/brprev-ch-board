@@ -22,6 +22,20 @@ rodando o test
 make test
 ```
 
+`make help`, para saber mais...
+
+#### Usando o Docker 
+```
+# buildando o container
+docker build -t board:latest . 
+
+# rodando o container
+docker container run board:latest
+
+# passando variaveis de ambiente
+docker run board:latest -e "TIMEOUT=10"
+```
+
 # O Desafio
 
 Considere o seguinte jogo hipotético muito semelhante a Banco Imobiliário, onde várias de suas mecânicas
