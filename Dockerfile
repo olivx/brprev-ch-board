@@ -5,8 +5,6 @@ RUN apt-get update && apt-get install git -y
 
 COPY Pipfile* /app/
 
-
-
 RUN pip install --upgrade pip && \
     pip install pipenv && \
     pipenv install --system --deploy
