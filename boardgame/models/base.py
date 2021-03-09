@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from collections import namedtuple
 from datetime import datetime
 from random import randint
 
@@ -8,8 +7,8 @@ from ..settings import BOARD_LENGTH, TIMEOUT
 
 class House:
 
-    def __init__(self, id, owner=None, *args, **kwargs):
-        self.id = id
+    def __init__(self, pk, owner=None, *args, **kwargs):
+        self.id = pk
         self.owner = owner
         self.rent = randint(30, 120)
         self.price = randint(30, 120)
@@ -22,7 +21,7 @@ class House:
 
 
 class BasePlayer(ABC):
-    STRATEGY = ("impulsive", "demanding", "cautious", "randomer")
+    STRATEGY = ("impulsive", "demanding", "cautious", "randomizer")
 
     def __init__(self, strategy, position=0, money=100, *args, **kwargs):
         self.position = position
@@ -45,8 +44,6 @@ class BasePlayer(ABC):
         if self._roles_to_bay(house):
             house.owner = self
 
-
-    # board[house.id] = house
     @abstractmethod
     def _roles_to_bay(self, house, board):
         raise NotImplementedError()

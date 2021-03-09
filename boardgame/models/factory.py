@@ -1,4 +1,4 @@
-from ..models.base import (
+from .base import (
     BasePlayer, Board, PlayerCautious, PlayerDemanding, PlayerImpulsive, PlayerRandom
 )
 
@@ -6,7 +6,7 @@ strategies = {
     "impulsive": PlayerImpulsive,
     "demanding": PlayerDemanding,
     "cautious": PlayerCautious,
-    "randomer": PlayerRandom,
+    "randomizer": PlayerRandom,
 }
 
 

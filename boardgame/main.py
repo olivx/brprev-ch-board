@@ -2,13 +2,13 @@ from datetime import datetime
 
 from .models.base import Board
 from .models.factory import create_board
-from .settings import PLYED_TIMES, TIMEOUT
+from .settings import PLAYED_TIMES, TIMEOUT
 from .utils import show_stats
 
 
 def main():
     results = []
-    for index in range(PLYED_TIMES):
+    for index in range(PLAYED_TIMES):
         board = create_board()
         while board.winner is None:
             for player in board.players:
