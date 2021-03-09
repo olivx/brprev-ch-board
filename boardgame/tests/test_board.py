@@ -2,7 +2,7 @@
 from boardgame.settings import BOARD_LENGTH
 
 
-def test_board_lenth(board):
+def test_board_length(board):
     assert len(board) == BOARD_LENGTH
 
 

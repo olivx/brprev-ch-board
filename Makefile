@@ -21,7 +21,7 @@ format:
 
 .PHONY: test # 	Run test with pytest and coverage boardgane
 test:
-	python -m pytest --cov=boardgame
+	python -m pytest --cov=boardgame  --cov-report=html
 
 .PHONY: test-cov # 	Run pytest with corverage report in html
 test-cov:
